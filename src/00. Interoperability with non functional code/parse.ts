@@ -1,4 +1,4 @@
-import { Either, tryCatch } from "fp-ts/Either";
+import { Either, tryCatch } from "fp-ts/lib/Either";
 
 /**
  * parse 함수는 문자열을 입력받아 JSON 객체로 변환합니다.
