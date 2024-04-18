@@ -1,22 +1,21 @@
-import { none, some } from "fp-ts/lib/Option";
+import { getEq, isSome, some } from "fp-ts/lib/Option";
+import * as N from "fp-ts/number";
 import { find } from "./find";
 
 describe("find", () => {
-  it("요소를 찾지 못하면 none을 반환해야 합니다.", () => {
-    const as = [1, 2, 3, 4, 5];
-    const predicate = (a: number) => a > 5;
+  const array: number[] = [1, 2, 3, 5];
 
-    const result = find(as, predicate);
-
-    expect(result).toEqual(none);
-  });
+  const E = getEq(N.Eq);
 
   it("요소를 찾으면 some을 반환해야 합니다.", () => {
-    const as = [1, 2, 3, 4, 5];
-    const predicate = (a: number) => a === 3;
+    const result = find(array, (a) => a === 1);
+    expect(isSome(result)).toBeTruthy();
+    expect(E.equals(result, some(1))).toBeTruthy();
+  });
 
-    const result = find(as, predicate);
-
-    expect(result).toEqual(some(3));
+  it("요소를 찾지 못하면 none을 반환해야 합니다.", () => {
+    const result = find(array, (a) => a === 4);
+    expect(isSome(result)).toBeFalsy();
+    expect(E.equals(result, some(4))).toBeFalsy();
   });
 });
