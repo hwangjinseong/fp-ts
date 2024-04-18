@@ -1,4 +1,4 @@
-import { Option, none, some } from "fp-ts/Option";
+import { Option, none, some } from "fp-ts/lib/Option";
 
 // 만약 찾지 못하면 none을 반환하고, 찾으면 해당 인덱스를 감싼 some을 반환합니다.
 export function findIndex<A>(
