@@ -1,6 +1,6 @@
 import { Eq } from "fp-ts/lib/Eq";
 
-type Point = {
+export type Point = {
   x: number;
   y: number;
 };
