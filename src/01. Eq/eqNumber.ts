@@ -1,5 +1,5 @@
-import { Eq } from "../modules/Eq/Eq";
+import { Eq } from "./eq";
 
 export const eqNumber: Eq<number> = {
-  equals: (x, y) => x === y,
+	equals: (x, y) => x === y,
 };
