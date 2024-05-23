@@ -1,3 +1,3 @@
 export interface Task<A> {
-  (): Promise<A>;
+	(): Promise<A>;
 }

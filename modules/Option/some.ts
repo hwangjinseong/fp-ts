@@ -1,4 +1,4 @@
-import { Option } from "./Option";
+import { Option } from ".";
 
 /**
  * 'Some'을 구성합니다. 존재하는 선택적 값을 나타냅니다.

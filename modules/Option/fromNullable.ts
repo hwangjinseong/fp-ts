@@ -1,4 +1,4 @@
-import { Option } from "./Option";
+import { Option } from ".";
 
 /**
  * nullable 유형에서 새로운 `Option`을 생성합니다. 값이 'null' 또는 'undefine'이면 'None'을 반환하고

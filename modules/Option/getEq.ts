@@ -1,4 +1,4 @@
-import { Eq } from "../../01. Eq/eq";
-import { Option } from "./Option";
+import { Eq } from "fp-ts/lib/Eq";
+import { Option } from ".";
 
 export declare const getEq: <A>(E: Eq<A>) => Eq<Option<A>>;
