@@ -1,4 +1,4 @@
-import { functorResponse } from "./FunctorResponse";
+import { functorResponse } from "./functorResponse";
 
 describe("functorResponse", () => {
 	it("functorResponse.URI = 'Response'", () => {
